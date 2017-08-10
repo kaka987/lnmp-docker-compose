@@ -26,5 +26,6 @@ mysql:
   volumes:
     - ./mysql/data:/var/lib/mysql:rw
     - ./mysql/sql:/tmp/sql:rw
+    - ./mysql/etc:/etc/mysql:rw
   environment:
     - MYSQL_ROOT_PASSWORD=123456
