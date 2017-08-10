@@ -7,6 +7,8 @@ $ cd lnmp-docker-compose
 
 $ docker-compose up -d 
 
+$ chown -R www-data.www-data app/*
+$ chmod -R 700 app/*
 
 Add local url dns to hosts, such as:
 
