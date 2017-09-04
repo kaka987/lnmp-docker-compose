@@ -18,6 +18,9 @@ Add local url dns to hosts, such as:
 
 Request: http://hello.in 
 
+# update @20170904
+1. add php7-fpm
+2. update the timezone in docker
 
 # update @20170810
 
