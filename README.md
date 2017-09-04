@@ -5,6 +5,8 @@ $ git clone https://github.com/kaka987/lnmp-docker-compose.git
 
 $ cd lnmp-docker-compose
 
+$ mkdir mysql/data
+
 $ docker-compose up -d 
 
 $ chown -R www-data.www-data app/*
