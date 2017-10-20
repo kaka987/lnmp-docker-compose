@@ -12,12 +12,12 @@ nginx:
   links:
     - php:__DOCKER_PHP_FPM__
 php:
-  build: ./php
+  build: ./php7
   ports:
-    - "9000:9000"
+    - "9001:9000"
   volumes:
     - ./app:/var/www
-    - ./php/conf/php.ini:/etc/php/php.ini:rw
+    - ./php7/conf/php.ini:/etc/php7/php.ini:rw
     - /etc/localtime:/etc/localtime:ro
   links:
     - mysql:mysql
