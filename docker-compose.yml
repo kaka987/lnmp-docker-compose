@@ -16,7 +16,7 @@ php:
   ports:
     - "9000:9000"
   volumes:
-    - ./app:/var/www
+    - ./app:/usr/share/nginx/html
     - ./php/conf/php.ini:/etc/php/php.ini:rw
     - /etc/localtime:/etc/localtime:ro
   links:
