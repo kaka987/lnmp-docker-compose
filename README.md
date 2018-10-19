@@ -10,6 +10,7 @@ $ mkdir mysql/data
 $ docker-compose up -d 
 
 $ chown -R www-data.www-data app/*
+
 $ chmod -R 700 app/*
 
 Add local url dns to hosts, such as:
@@ -19,6 +20,11 @@ Add local url dns to hosts, such as:
 
 
 Request: http://hello.in 
+
+
+
+# update @20181019
+1. change mysql dockerfile -> mysql version 5.7.23, latest version is 8.0
 
 # update @20170904
 1. add php7-fpm
