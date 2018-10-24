@@ -22,3 +22,4 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install -j$(nproc) mysqli
 RUN docker-php-ext-install -j$(nproc) zip
 RUN docker-php-ext-install -j$(nproc) opcache
+RUN docker-php-ext-install -j$(nproc) pdo_mysql
