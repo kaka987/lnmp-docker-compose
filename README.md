@@ -1,5 +1,11 @@
 # lnmp-docker-compose
 
+Description:
+
+Use docker-compose to start up linux-nginx-php-mysql dev service.
+Include different php's version, such as php5.6 and php7.2.
+
+
 
 Prepare:
 
@@ -14,6 +20,8 @@ Prepare:
 5 docker 17.04.0-ce (already installed)
 
 6 docker-compose 1.13.0 (already installed)
+
+
 
 
 
