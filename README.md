@@ -21,7 +21,9 @@ Add local url dns to hosts, such as:
 
 Request: http://hello.in 
 
-
+# update @20181024
+1.add php7.2 docker
+2 add php7 to docker-compose
 
 # update @20181019
 1. change mysql dockerfile -> mysql version 5.7.23, latest version is 8.0
