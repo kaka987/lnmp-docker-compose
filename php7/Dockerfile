@@ -2,11 +2,22 @@
 # See: https://hub.docker.com/_/php/
 ######
 
-#FROM php:7.0.5-fpm
-FROM php7.2-fpm-alpine
+FROM php:7.2.11-fpm
 MAINTAINER Young <zhy_0875@gmail.com>
+
+RUN mkdir -p /var/www
+
+WORKDIR /var/www
 
 ######
 # You can install php extensions using docker-php-ext-install
 ######
-
+RUN apt-get update && apt-get install -y \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    && docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-install -j$(nproc) mysqli \
+    && docker-php-ext-install -j$(nproc) zip \
+    && docker-php-ext-install -j$(nproc) opcache \
+    && docker-php-ext-install -j$(nproc) pdo_mysql

@@ -11,6 +11,7 @@ nginx:
     - /etc/localtime:/etc/localtime:ro
   links:
     - php:__DOCKER_PHP_FPM__
+    - php7:__DOCKER_PHP7_FPM__
 php:
   build: ./php
   ports:
@@ -32,3 +33,13 @@ mysql:
     - /etc/localtime:/etc/localtime:ro
   environment:
     - MYSQL_ROOT_PASSWORD=123456
+php7:
+  build: ./php7
+  ports:
+    - "9001:9000"
+  volumes:
+    - ./app:/var/www
+    - ./php7/etc:/usr/local/etc/php:rw
+    - /etc/localtime:/etc/localtime:ro
+  links:
+    - mysql:mysql    
