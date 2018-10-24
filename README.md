@@ -1,5 +1,21 @@
 # lnmp-docker-compose
-lnmp-docker-compose
+
+
+Prepare:
+
+1 ubuntu 14.04
+
+2 nginx 1.15.5 (latest)
+
+3 mysql 5.7.23
+
+4 php 7.2
+
+5 docker 17.04.0-ce (already installed)
+
+6 docker-compose 1.13.0 (already installed)
+
+
 
 $ git clone https://github.com/kaka987/lnmp-docker-compose.git
 
