@@ -5,7 +5,7 @@ Description:
 Use docker-compose to start up linux-nginx-php-mysql dev service.
 Include different php's version, such as php5.6 and php7.2.
 
-
+---
 
 Prepare:
 
@@ -22,8 +22,9 @@ Prepare:
 6 docker-compose 1.13.0 (already installed)
 
 
+---
 
-
+Start:
 
 $ git clone https://github.com/kaka987/lnmp-docker-compose.git
 
@@ -37,13 +38,16 @@ $ chown -R www-data.www-data app/*
 
 $ chmod -R 700 app/*
 
+---
+
 Add local url dns to hosts, such as:
 
 192.168.1.1 hello.in
 192.168.1.1 www.hello.in
 
-
 Request: http://hello.in 
+
+---
 
 # update @20181024
 1.add php7.2 docker
