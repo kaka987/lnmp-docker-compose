@@ -2,7 +2,7 @@
 
 Description:
 
-Use docker-compose to start up linux-nginx-php-mysql dev service.
+Use vagrant and docker-compose to start up linux-nginx-php-mysql dev service.
 Include different php's version, such as php5.6 and php7.2.
 
 ---
