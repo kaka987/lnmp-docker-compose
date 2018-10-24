@@ -15,7 +15,7 @@ Prepare:
 
 3 mysql 5.7.23
 
-4 php 7.2
+4 php 7.2 and php 5.6
 
 5 docker 17.04.0-ce (already installed)
 
@@ -50,17 +50,17 @@ Request: http://hello.in
 ---
 
 # update @20181024
-1.add php7.2 docker
-2 add php7 to docker-compose
+* add php7.2 docker 
+* add php7 to docker-compose
 
 # update @20181019
-1. change mysql dockerfile -> mysql version 5.7.23, latest version is 8.0
+* change mysql dockerfile -> mysql version 5.7.23, latest version is 8.0
 
 # update @20170904
-1. add php7-fpm
-2. update the timezone in docker
+* add php7-fpm
+* update the timezone in docker
 
 # update @20170810
 
-1. add mysql etc 
-2. add php db scripts
+* add mysql etc 
+* add php db scripts
