@@ -10,6 +10,7 @@ nginx:
     - ./nginx/conf.d/:/etc/nginx/conf.d/:rw
     - ./nginx/ca:/etc/nginx/ca:ro
     - /etc/localtime:/etc/localtime:ro
+    - ./logs/nginx:/var/log/nginx:rw
   links:
     - php:__DOCKER_PHP_FPM__
     - php7:__DOCKER_PHP7_FPM__  
