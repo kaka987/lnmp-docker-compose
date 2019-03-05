@@ -1,5 +1,6 @@
 nginx:
   image: nginx:latest
+  container_name: nginx
   ports:
     - "80:80"
     - "443:443"
@@ -11,9 +12,10 @@ nginx:
     - /etc/localtime:/etc/localtime:ro
   links:
     - php:__DOCKER_PHP_FPM__
-    - php7:__DOCKER_PHP7_FPM__
+    - php7:__DOCKER_PHP7_FPM__  
 php:
   build: ./php
+  container_name: php
   ports:
     - "9000:9000"
   volumes:
@@ -24,8 +26,9 @@ php:
     - mysql:mysql
 mysql:
   build: ./mysql
+  container_name: mysql
   ports:
-    - "127.0.0.1:3306:3306"
+    - "3308:3306"
   volumes:
     - ./mysql/data:/var/lib/mysql:rw
     - ./mysql/sql:/tmp/sql:rw
@@ -35,6 +38,7 @@ mysql:
     - MYSQL_ROOT_PASSWORD=123456
 php7:
   build: ./php7
+  container_name: php7
   ports:
     - "9001:9000"
   volumes:
@@ -42,4 +46,4 @@ php7:
     - ./php7/etc:/usr/local/etc/php:rw
     - /etc/localtime:/etc/localtime:ro
   links:
-    - mysql:mysql    
+    - mysql:mysql
