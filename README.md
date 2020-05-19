@@ -48,6 +48,9 @@ Add local url dns to hosts, such as:
 Request: http://hello.in 
 
 ---
+# update @20200519
+* update php7 Dockerfile 
+* update php7 php.ini
 
 # update @20181024
 * add php7.2 docker 
