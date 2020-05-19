@@ -5,9 +5,13 @@
 FROM php:7.2.11-fpm
 MAINTAINER Young <zhy_0875@gmail.com>
 
-RUN mkdir -p /var/www
+COPY composer /usr/bin/composer
 
-WORKDIR /var/www
+RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+
+RUN mkdir -p /usr/share/nginx/html
+
+WORKDIR /usr/share/nginx/html
 
 ######
 # You can install php extensions using docker-php-ext-install

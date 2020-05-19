@@ -43,7 +43,7 @@ php7:
   ports:
     - "9001:9000"
   volumes:
-    - ./app:/var/www
+    - ./app:/usr/share/nginx/html
     - ./php7/etc:/usr/local/etc/php:rw
     - /etc/localtime:/etc/localtime:ro
   links:
