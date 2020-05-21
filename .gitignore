@@ -4,7 +4,10 @@
 !/mysql
 !/nginx
 !/php
+!/php/composer
+!/php/redis.tar.gz
 !/php7
+!/php7/composer
 !/script
 !.gitignore
 !docker-compose.yml
