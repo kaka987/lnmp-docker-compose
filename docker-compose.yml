@@ -46,5 +46,7 @@ php7:
     - ./app:/usr/share/nginx/html
     - ./php7/etc:/usr/local/etc/php:rw
     - /etc/localtime:/etc/localtime:ro
+    - ./php7/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf:rw
+    - ./logs/php7:/var/log/php:rw  
   links:
     - mysql:mysql
