@@ -24,5 +24,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) zip \
     && docker-php-ext-install -j$(nproc) opcache \
     && docker-php-ext-install -j$(nproc) pdo_mysql
-COPY redis.tar.gz /tmp/
-RUN tar xfz /tmp/redis.tar.gz     && rm -r /tmp/redis.tar.gz     && mkdir -p /usr/src/php/ext     && mv redis-4.3.0 /usr/src/php/ext/redis     && docker-php-ext-install redis
+#COPY redis.tar.gz /tmp/
+#RUN tar xfz /tmp/redis.tar.gz     && rm -r /tmp/redis.tar.gz     && mkdir -p /usr/src/php/ext     && mv redis-4.3.0 /usr/src/php/ext/redis     && docker-php-ext-install redis
+RUN apt  --allow-releaseinfo-change  update && apt install -y libicu-dev
+RUN docker-php-ext-install -j$(nproc) intl

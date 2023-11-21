@@ -1,1 +1,1 @@
-<?php phpinfo();
+<?php echo 404;exit;
