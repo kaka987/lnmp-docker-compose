@@ -14,3 +14,6 @@
 !README.md
 !Vagrant
 !/php8
+!/php8/Dockerfile
+!/php8/etc/php-fpm.conf
+!/php8/etc/php.ini
